@@ -8,3 +8,4 @@ folium
 matplotlib
 numpy
 geopandas
+descartes
