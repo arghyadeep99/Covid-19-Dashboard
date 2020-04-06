@@ -1,14 +1,14 @@
-<h1 align="center">🇮🇳 :robot: Covid-19 Dashboard 🦠:warning: </h1>
+<h1 align="center"> 🦠:chart_with_upwards_trend: Covid-19 Dashboard :bar_chart::warning: </h1>
 
 <div align="center">
 
-<img src="./logo.jpg" width=250px height=225px/>
+<img src="https://i0.wp.com/inc42.com/wp-content/uploads/2020/03/quarantine-app-india-startups-featured.jpg?resize=680%2C510&ssl=1" width=500px height=350px/>
 
 <br>
 
 [![](https://img.shields.io/badge/Made_with-Python3-red?style=for-the-badge&logo=python)](https://www.python.org "Python3")
-[![](https://img.shields.io/badge/IDE-Visual_Studio_Code-red?style=for-the-badge&logo=visual-studio-code)](https://code.visualstudio.com/  "Visual Studio Code")
-[![](https://img.shields.io/badge/Deployed_on-Slack-red?style=for-the-badge&logo=slack)](https://www.slack.com/  "Slack")
+[![](https://img.shields.io/badge/IDE-Jupyter_Notebook-red?style=for-the-badge&logo=jupyter)](https://jupyter.org/  "Jupyter Notebook")
+[![](https://img.shields.io/badge/Deployed_on-Heroku-red?style=for-the-badge&logo=heroku)](https://www.heroku.com/  "Heroku")
 
 <br>
 
@@ -18,73 +18,44 @@
 
 <h2>Motivation:</h2> 
 
-It's quarantine phase in India and every CS enthusiast is determined to help in some technical way to fight this pandemic called Covid-19. Hence, it motivated me to try something in terms of chatbot to keep me updated about live changing numbers since different media channels show different count of patients. This chatbot fetches Corona patients data from official website of Government of India and returns information about the state-wise patients automatically in #random channel. 
+I always wished to create dashboard from simple data visualizations that we do as a machine learning practioner. While this repository doesn't contain any machine learning visualization, this is simply visualzing the data available from John Hopkins University repository. The dashboard has been developed using Plotly, Jupyter Notebook and deployed on Heroku using Voila.
 
 ### Goals of this project:
 
-* [x] Learn chatbot development (at least rule based)
-* [x] Learn how to deal with external APIs in Slack. 
-* [x] Learn web scraping using Beautiful Soup. 
+* [x] Learn more data visualization techniques. 
+* [x] Learn about deploying Jupyter Notebook to web using Voila as a stand-alone web application.
+* [x] Make the website extract data dynamically each time the website is visited.
 * [x] Cut out boredom during this quarantine phase. 
 
 ---
 
-<h3 align="center">Chatbot in Action</h3>
+### Showstoppers:
 
-<div align="center">
-<img src="./ss.png"/>
-<br>
-</div>
-
----
-#### To talk with my chatbot, kindly join my Slack [here](https://join.slack.com/t/arghyadeep/shared_invite/zt-ctlwd1oh-OCSpzwTsbSoEJZ1gWhm5Qw) and go over to #random channel to talk with it. 
-
-### To run this Project:
-
-* Create an account on Slack and create your own workspace. 
-* Clone this repo, pip install the requirements and create auth.py:
-```bash
-git clone https://github.com/arghyadeep99/Go-Karuna-Go.git
-cd Go-Karuna-Go
-pip install -r requirements.txt
-touch auth.py
-```
-* Set up your Slack API by creating an app and allow incoming webhooks.
-* Copy your Slack webhook and put it in auth.py:
-```python
-DEFAULT_SLACK_WEBHOOK = 'https://hooks.slack.com/services/<your webhook url>'
-```
-* Setup a cronjob to receive updates whenever there's a change on government website. 
-```bash
-crontab -e # opens an editor like vim or nano
-# now write the following line in the crontab file:
-*/5 * * * * python3 $PATH_TO_GO_KARUNA_GO/corona-bot.py --states 'haryana,maharashtra'
-# Replace $PATH_TO_GO_KARUNA_GO with actual path to the python file.
-# /5 indicates job will run every 5 minutes
-# In order to receive updates for all states, ignore the --states flag
-```
+* [ ] Unable to remove the metadata that is being printed at the end of the website.
+* [ ] The website runs all cells of the Jupyter Notebook each time the website is visited (includes refreshing). This slows down the loading time, considering projects involving large number of cells or code.
+* [ ] The graphs take a bit of time to load even after the website is shown as loaded. The graphs need an additional time to display. 
 
 ### Future scope of this project:
 
-* [ ] Add ability to query for FAQs regarding Corona Virus from authentic sources like WHO. 
-* [ ] Incorporate this bot as a service on my [website](https://arghyadeep99.github.io).  
+* [ ] Add more, more and more visualizations! Looking forward to PRs and issues being raised for adding more interactive and unique visualizations.  
+* [ ] Improve the loading time of the website. 
 
 ### Tech Stack of this Project:
 
 * Backend: Python3
-* Dependencies: Slack API
-* Libraries: Available in [requirements.txt](https://github.com/arghyadeep99/Go-Karuna-Go/blob/master/requirements.txt).
+* Dependencies: Voila, Heroku
+* Libraries: Available in [requirements.txt](https://github.com/arghyadeep99/Covid-19-Dashboard/blob/master/requirements.txt).
 
 
 #### This project still has scope of development, so you can also contribute to this Project as follows:
-* [Fork](https://github.com/arghyadeep99/Go-Karuna-Go) this Repository.
+* [Fork](https://github.com/arghyadeep99/Covid-19-Dashboard) this Repository.
 * Clone your Fork on a different branch:
-	* `git clone -b <name-of-branch> https://github.com/arghyadeep99/Go-Karuna-Go.git`
+	* `git clone -b <name-of-branch> https://github.com/arghyadeep99/Covid-19-Dashboard.git`
 * After adding any feature:
 	* Goto your fork and create a pull request.
 	* I will test your modifications and merge changes.
 
-This project was done `in my quarantine time as a concerned citizen of India, willing to contribute in some way.`
+This project was done `in my quarantine time under Lockdown.`
 
 ---
 <h3 align="center"><b>Developed with :heart: by <a href="https://github.com/arghyadeep99">Arghyadeep Das</a>.</b></h1>
