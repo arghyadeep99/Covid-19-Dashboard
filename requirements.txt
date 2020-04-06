@@ -7,3 +7,4 @@ plotly
 folium
 matplotlib
 numpy
+geopandas
